@@ -29,9 +29,8 @@ fn main() {
         counter+=1;
     }
 
+    let strings:Vec<String>=array.into_iter().map(|x|x.to_string()).collect();
+    print!("{}", strings.join(" "));
 
-    for elements in array{
-        print!(" {}", elements);
-    }
 
 }
