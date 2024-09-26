@@ -6,7 +6,7 @@ fn main() {
     io::stdin()
         .read_line(&mut line)
         .expect("Failed to read line");
-    let chars : Vec<&str> = line.split(' ').collect();
+    let chars : Vec<&str> = line.trim().split(' ').collect();
     for i in 0..chars.len()-1 {
         array.push(chars[i].parse::<i32>().unwrap());
     }
@@ -26,7 +26,8 @@ while counter<array.len() {
 }
 
 
-    print!("{:?}",array);
-
+    for elements in array{
+        print!("{} ", elements);
+    }
 
 }
